@@ -38,7 +38,7 @@ protein_expression_all_IDs$delabel <- NA
 protein_expression_all_IDs$delabel[protein_expression_all_IDs$Expression != "Unchaged"] <- protein_expression_all_IDs$Symbol[protein_expression_all_IDs$Expression !="Unchaged"]
 
 #Save the protein expression table including multiple gene IDs
-write_xlsx(protein_expression_all_IDs,"C:/Users/Yourname/protein_expression_all_IDs_merge.xlsx")
+write_xlsx(protein_expression_all_IDs,"C:/Users/Yourname/Documents/protein_expression_all_IDs_merge.xlsx")
 
 #Plot Volcano plot and highlight upregulate and downregulate proteins
 ggplot(data=protein_expression_all_IDs, aes(x=Log2.Fold.Change, y=-log10(p.Value.Adj), col=Expression, label=delabel)) +
